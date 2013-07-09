@@ -94,7 +94,7 @@ if ( require.main == module ) {
             console.log(outJson);
         };
         var checkJson = checkHtmlUrl(program.checks,printJson);
-        restler.get(program.url).on('complete', checkJson);
+        rest.get(program.url).on('complete', checkJson);
     } else if ( program.url && program.file != HTMLFILE_DEFAULT) {
         console.log("Error");
         process.exit(1);
